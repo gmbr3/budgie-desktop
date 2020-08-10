@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=Budgie Window Manager
-Exec=budgie-wm
+Exec=budgie-wm --replace
 NoDisplay=true
 X-GNOME-WMSettingsModule=metacity
 X-GNOME-WMName=Budgie
