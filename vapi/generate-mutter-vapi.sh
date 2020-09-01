@@ -2,9 +2,9 @@
 set -xe
 
 version=${6-7}
-girdir=$(pkg-config libmutter-$version --variable=girdir)
+girdir=$(pkg-config libmutter-"$version" --variable=girdir)
 
-cd $(dirname $0)
+cd "$(dirname "$0")"
 
 for lib in cogl clutter meta; do
     libversion=$lib-$version
@@ -17,7 +17,7 @@ for lib in cogl clutter meta; do
         custom_vapi="$vapiname-custom.vala"
     fi
 
-    vapigen --library $vapiname $girdir/$girname.gir \
+    vapigen --library "$vapiname" "$girdir/$girname".gir \
             --girdir . -d . --metadatadir . --vapidir . \
-            --girdir $girdir/ $custom_vapi
+            --girdir "$girdir"/ "$custom_vapi"
 done
