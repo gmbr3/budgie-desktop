@@ -33,11 +33,11 @@ typedef struct _BudgiePluginIface BudgiePluginIface;
  * BudgiePluginIface
  */
 struct _BudgiePluginIface {
-    GTypeInterface parent_iface;
+	GTypeInterface parent_iface;
 
-    BudgieApplet* (*get_panel_widget)(BudgiePlugin* self, gchar* uuid);
+	BudgieApplet* (*get_panel_widget)(BudgiePlugin* self, gchar* uuid);
 
-    gpointer padding[4];
+	gpointer padding[4];
 };
 
 BudgieApplet* budgie_plugin_get_panel_widget(BudgiePlugin* self, gchar* uuid);

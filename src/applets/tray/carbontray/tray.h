@@ -19,40 +19,40 @@
 #include <stdbool.h>
 
 typedef struct {
-    GObject parent_instance;
+	GObject parent_instance;
 
-    GtkWidget* box;
-    int iconSize;
+	GtkWidget* box;
+	int iconSize;
 
-    GHashTable* socketTable;
-    GtkWidget* invisible;
+	GHashTable* socketTable;
+	GtkWidget* invisible;
 
-    GdkAtom selectionAtom;
-    Atom opcodeAtom;
-    Atom dataAtom;
-    GSList* messages;
+	GdkAtom selectionAtom;
+	Atom opcodeAtom;
+	Atom dataAtom;
+	GSList* messages;
 } CarbonTray;
 
 typedef struct {
-    GObjectClass parent_class;
+	GObjectClass parent_class;
 
-    void (*message_sent)(CarbonTray* tray, CarbonChild* child, char* message, long id, long timeout);
+	void (*message_sent)(CarbonTray* tray, CarbonChild* child, char* message, long id, long timeout);
 } CarbonTrayClass;
 
 typedef struct {
-    char* string;
+	char* string;
 
-    long id;
-    long length;
-    long remainingLength;
-    long timeout;
+	long id;
+	long length;
+	long remainingLength;
+	long timeout;
 
-    Window window;
+	Window window;
 } CarbonMessage;
 
 typedef struct {
-    GtkWidget* box;
-    cairo_t* cr;
+	GtkWidget* box;
+	cairo_t* cr;
 } CarbonDrawData;
 
 

@@ -17,20 +17,20 @@
 #include <stdbool.h>
 
 typedef struct _CarbonChild {
-    GtkSocket parent;
+	GtkSocket parent;
 
-    int preferredWidth;
-    int preferredHeight;
-    Window iconWindow;
+	int preferredWidth;
+	int preferredHeight;
+	Window iconWindow;
 
-    char* wmclass;
+	char* wmclass;
 
-    bool parentRelativeBg;
-    bool isComposited;
+	bool parentRelativeBg;
+	bool isComposited;
 } CarbonChild;
 
 typedef struct _CarbonChildClass {
-    GtkSocketClass parent_class;
+	GtkSocketClass parent_class;
 } CarbonChildClass;
 
 

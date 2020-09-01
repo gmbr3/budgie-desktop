@@ -25,17 +25,17 @@ typedef struct _BudgiePopoverPrivate BudgiePopoverPrivate;
  * @closed: Virtual closed signal
  */
 struct _BudgiePopoverClass {
-    GtkWindowClass parent_class;
+	GtkWindowClass parent_class;
 
-    /* Marked for gtk-doc syntax */
-    void (*closed)(BudgiePopover* popover);
+	/* Marked for gtk-doc syntax */
+	void (*closed)(BudgiePopover* popover);
 
-    gpointer padding[12];
+	gpointer padding[12];
 };
 
 struct _BudgiePopover {
-    GtkWindow parent;
-    BudgiePopoverPrivate* priv;
+	GtkWindow parent;
+	BudgiePopoverPrivate* priv;
 };
 
 /**
@@ -53,8 +53,8 @@ struct _BudgiePopover {
  * in accordance with the screen edge, i.e. top, left, bottom, right.
  */
 typedef enum {
-    BUDGIE_POPOVER_POSITION_AUTOMATIC = 0,
-    BUDGIE_POPOVER_POSITION_TOPLEVEL_HINT,
+	BUDGIE_POPOVER_POSITION_AUTOMATIC = 0,
+	BUDGIE_POPOVER_POSITION_TOPLEVEL_HINT,
 } BudgiePopoverPositionPolicy;
 
 #define BUDGIE_TYPE_POPOVER budgie_popover_get_type()
