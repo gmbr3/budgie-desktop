@@ -35,7 +35,7 @@ typedef struct _BudgieAppletInfoClass BudgieAppletInfoClass;
  * BudgieAppletInfoClass
  */
 struct _BudgieAppletInfoClass {
-	GObjectClass parent_class;
+    GObjectClass parent_class;
 };
 
 /**
@@ -45,8 +45,8 @@ struct _BudgieAppletInfoClass {
  * and control each applet instance.
  */
 struct _BudgieAppletInfo {
-	GObject parent_instance;
-	BudgieAppletInfoPrivate* priv;
+    GObject parent_instance;
+    BudgieAppletInfoPrivate* priv;
 };
 
 BudgieAppletInfo* budgie_applet_info_new(PeasPluginInfo* plugin_info, const char* uuid, BudgieApplet* applet, GSettings* settings);
