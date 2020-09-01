@@ -1,8 +1,8 @@
 /*
  * This file is part of budgie-desktop
- * 
+ *
  * Copyright © 2015-2019 Budgie Desktop Developers
- * 
+ *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
@@ -131,7 +131,7 @@ public class ClientWidget : Gtk.Box {
 		prev_btn = btn;
 		btn.clicked.connect(()=> {
 			if (client.player.can_go_previous) {
-				try { 
+				try {
 					client.player.previous.begin();
 				} catch (Error e) {
 					warning("Could not go to previous track: %s", e.message);
@@ -160,7 +160,7 @@ public class ClientWidget : Gtk.Box {
 		next_btn = btn;
 		btn.clicked.connect(()=> {
 			if (client.player.can_go_next) {
-				try { 
+				try {
 					client.player.next.begin();
 				} catch (Error e) {
 					warning("Could not go to next track: %s", e.message);

@@ -296,7 +296,7 @@ namespace Budgie {
 		/**
 		 * invalid_window will check if the provided window is our current window
 		 * If the provided window is our current window, update to any new window in the class group, update our name, etc.
-		 * 
+		 *
 		 */
 		public void invalidate_window(Wnck.Window window) {
 			if (this.window == null || window == null) {

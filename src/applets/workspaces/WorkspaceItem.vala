@@ -10,7 +10,7 @@
  */
 
 namespace Workspaces {
-	const Gtk.TargetEntry[] target_list = { 
+	const Gtk.TargetEntry[] target_list = {
 		{ "application/x-wnck-window-id", 0, 0 }
 	};
 

@@ -1,9 +1,9 @@
 /*
  * This file is part of budgie-desktop
- * 
+ *
  * Copyright © 2015-2019 Budgie Desktop Developers
  * Copyright 2014 Josh Klar <j@iv597.com> (original Budgie work, prior to Budgie 10)
- * 
+ *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
@@ -55,7 +55,7 @@ namespace Budgie {
 		/* Explicit copy */
 		string inp2 = "" + inp;
 
-		/* 
+		/*
 		* is it already escaped?
 		*/
 		foreach (string str in ESCAPE_STRINGS) {
@@ -395,7 +395,7 @@ namespace Budgie {
 			}
 
 			label_title.ellipsize = Pango.EllipsizeMode.END;
-		
+
 			label_body.set_markup(safe_markup_string(body));
 			this.body = body;
 
@@ -731,7 +731,7 @@ namespace Budgie {
 					pack.begin_decay();
 				}
 			});
-			
+
 			return notif_id;
 		}
 
@@ -783,7 +783,7 @@ namespace Budgie {
 						y = ny - tail.get_child().get_allocated_height() - BUFFER_ZONE;
 					} else { // This is the first nofication on the screen
 						x = rect.x + BUFFER_ZONE;
-						
+
 						int height;
 						window.get_size(null, out height); // Get the estimated height of the notification
 						y = (rect.y + rect.height) - height - INITIAL_BUFFER_ZONE;
@@ -873,12 +873,12 @@ namespace Budgie {
 			clear_notifications_button.relief = Gtk.ReliefStyle.NONE;
 			clear_notifications_button.no_show_all = true;
 			clear_notifications_button.get_style_context().add_class("clear-all-notifications");
-			
+
 			button_mute = new Gtk.Button();
 			button_mute.set_image(image_notifications_enabled);
 			button_mute.relief = Gtk.ReliefStyle.NONE;
 			button_mute.get_style_context().add_class("do-not-disturb");
-			
+
 			var control_buttons = new Gtk.Box(Gtk.Orientation.HORIZONTAL, 0);
 			control_buttons.pack_start(button_mute, false, false, 0);
 			control_buttons.pack_start(clear_notifications_button, false, false, 0);

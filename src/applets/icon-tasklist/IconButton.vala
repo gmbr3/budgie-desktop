@@ -780,7 +780,7 @@ public class IconButton : Gtk.ToggleButton {
 					case Budgie.PanelPosition.RIGHT:
 						int to = 0;
 						if (counter == count-1) {
-							to = y + height; 
+							to = y + height;
 						} else {
 							to = previous_y+(height/count);
 						}
@@ -789,7 +789,7 @@ public class IconButton : Gtk.ToggleButton {
 					default:
 						int to = 0;
 						if (counter == count-1) {
-							to = x + width; 
+							to = x + width;
 						} else {
 							to = previous_x+(width/count);
 						}
@@ -979,12 +979,12 @@ public class IconButton : Gtk.ToggleButton {
 				} else {
 					windows = new GLib.List<unowned Wnck.Window>();
 				}
-	
+
 				if (windows.length() == 0) {
 					launch_app(Gtk.get_current_event_time());
 				} else if (this.app_info != null) {
 					string[] actions = app_info.list_actions();
-	
+
 					if ("new-window" in actions) { // If we have a preferred action set
 						launch_context.set_screen(get_screen());
 						launch_context.set_timestamp(Gdk.CURRENT_TIME);

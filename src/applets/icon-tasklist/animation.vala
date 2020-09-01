@@ -25,7 +25,7 @@ namespace BudgieTaskList {
 
 	/**
 	* Utility to struct to enable easier animations
-	* Inspired by Clutter. 
+	* Inspired by Clutter.
 	*/
 	[Compact]
 	public class Animation : Object {

@@ -1,6 +1,6 @@
 /*
  * This file is part of budgie-desktop
- * 
+ *
  * Copyright © 2015-2019 Budgie Desktop Developers
  *
  * This library is free software; you can redistribute it and/or
@@ -25,7 +25,7 @@ namespace Budgie {
 
 	/**
 	* Utility to struct to enable easier animations
-	* Inspired by Clutter. 
+	* Inspired by Clutter.
 	*/
 	[Compact]
 	public class Animation : Object {

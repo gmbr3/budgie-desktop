@@ -101,7 +101,7 @@ namespace Budgie {
 			}
 		}
 
-		
+
 		public signal void NotificationsChanged();
 
 		public uint GetNotificationCount() {

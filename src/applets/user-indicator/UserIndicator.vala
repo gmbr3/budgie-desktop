@@ -1,6 +1,6 @@
 /*
  * This file is part of budgie-desktop
- * 
+ *
  * Copyright © 2015-2019 Budgie Desktop Developers
  *
  * This program is free software; you can redistribute it and/or modify
@@ -27,10 +27,10 @@ public class UserIndicatorApplet : Budgie.Applet {
 
 	public UserIndicatorApplet(string uuid) {
 		Object(uuid: uuid);
-		
+
 		ebox = new Gtk.EventBox();
 		image = new Gtk.Image.from_icon_name(USER_SYMBOLIC_ICON, Gtk.IconSize.MENU);
-		ebox.add(image); 
+		ebox.add(image);
 
 		popover = new UserIndicatorWindow(image);
 
@@ -47,24 +47,24 @@ public class UserIndicatorApplet : Budgie.Applet {
 		add(ebox);
 		show_all();
 	}
-	
+
 	public void Toggle(){
 		if (popover.get_visible()) {
 			popover.hide();
 		} else {
 			popover.get_child().show_all();
 			this.manager.show_popover(ebox);
-		}		 
+		}
 	}
-	
+
 	public override void invoke_action(Budgie.PanelAction action) {
 		Toggle();
 	}
-	
+
 	public override void update_popovers(Budgie.PopoverManager? manager) {
 		this.manager = manager;
 		manager.register_popover(ebox, popover);
-	}	 
+	}
 }
 
 [ModuleInit]

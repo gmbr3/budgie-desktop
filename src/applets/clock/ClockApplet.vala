@@ -350,7 +350,7 @@ public class ClockApplet : Budgie.Applet {
 				format += ":%S";
 			}
 		}
-	
+
 		if (ampm) {
 			format += " %p";
 		}

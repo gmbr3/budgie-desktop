@@ -1128,8 +1128,8 @@ namespace Budgie {
 		}
 
 		/* Return sorted list of user open tabs */
-		private List<weak Meta.Window> get_current_tabs(Meta.Display display, 
-						Meta.Workspace workspace, 
+		private List<weak Meta.Window> get_current_tabs(Meta.Display display,
+						Meta.Workspace workspace,
 						bool getTabsForAllWindows) {
 			List<weak Meta.Window> tabs;
 			CompareFunc<weak Meta.Window> cm = Budgie.BudgieWM.tab_sort_reverse;

@@ -1,8 +1,8 @@
 /*
  * This file is part of budgie-desktop
- * 
+ *
  * Copyright © 2015-2019 Budgie Desktop Developers
- * 
+ *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
@@ -41,7 +41,7 @@ namespace Budgie {
 				warning("Unable to contact GNOME Session: %s", e.message);
 			}
 		}
-				
+
 		public PowerStrip(Budgie.Raven? raven) {
 			Gtk.Box? bottom = new Gtk.Box(Gtk.Orientation.HORIZONTAL, 20);
 
@@ -108,6 +108,6 @@ namespace Budgie {
 			} catch (Error e) {
 				warning("Cannot lock screen: %s", e.message);
 			}
-		}	 
+		}
 	}
 }

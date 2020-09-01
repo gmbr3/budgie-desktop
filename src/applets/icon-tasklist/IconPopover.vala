@@ -402,7 +402,7 @@ namespace Budgie {
 
 						for (int i = 0; i < workspaces_to_remove; i++) {
 							Budgie.IconPopoverItem child = workspace_items.nth_data(i);
-	
+
 							if (child != null) {
 								this.actions_view.remove(child);
 								workspace_items.remove(child);
