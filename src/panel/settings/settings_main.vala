@@ -125,8 +125,8 @@ namespace Budgie {
 		void build_content() {
 			this.add_page(new Budgie.StylePage());
 
-	#if HAVE_NAUTILUS
-			if (Environment.find_program_in_path("nautilus") != null) {
+	#if HAVE_NEMO
+			if (Environment.find_program_in_path("nemo") != null) {
 				this.add_page(new Budgie.DesktopPage());
 			}
 	#endif
