@@ -17,9 +17,9 @@ namespace Budgie {
 		private Settings wm_pref_settings;
 		private Gtk.SpinButton? workspace_count;
 
-	#if HAVE_NAUTILUS
+	#if HAVE_NEMO
 		private Settings bg_settings;
-		private Settings nautilus_settings;
+		private Settings nemo_settings;
 		private Gtk.Switch switch_icons;
 		private Gtk.Switch switch_home;
 		private Gtk.Switch switch_network;
@@ -39,7 +39,7 @@ namespace Budgie {
 
 			wm_pref_settings = new Settings("org.gnome.desktop.wm.preferences"); // Set up our wm preferences Settings
 
-	#if HAVE_NAUTILUS
+	#if HAVE_NEMO
 			/* Allow icons */
 			switch_icons = new Gtk.Switch();
 			grid.add_row(new SettingsRow(switch_icons,
@@ -47,7 +47,7 @@ namespace Budgie {
 				_("Control whether to allow launchers and icons on the desktop.")));
 
 			/* Hook up settings */
-			bg_settings = new Settings("org.gnome.desktop.background");
+			bg_settings = new Settings("org.nemo.desktop");
 			bg_settings.bind("show-desktop-icons", switch_icons, "active", SettingsBindFlags.DEFAULT);
 			bg_settings.changed["show-desktop-icons"].connect(this.update_switches);
 
@@ -76,11 +76,11 @@ namespace Budgie {
 				_("Mounted volumes & drives will appear on the desktop.")));
 
 
-			nautilus_settings = new Settings("org.gnome.nautilus.desktop");
-			nautilus_settings.bind("home-icon-visible", switch_home, "active", SettingsBindFlags.DEFAULT);
-			nautilus_settings.bind("network-icon-visible", switch_network, "active", SettingsBindFlags.DEFAULT);
-			nautilus_settings.bind("trash-icon-visible", switch_trash, "active", SettingsBindFlags.DEFAULT);
-			nautilus_settings.bind("volumes-visible", switch_mounts, "active", SettingsBindFlags.DEFAULT);
+			nemo_settings = new Settings("org.nemo.desktop");
+			nemo_settings.bind("home-icon-visible", switch_home, "active", SettingsBindFlags.DEFAULT);
+			nemo_settings.bind("network-icon-visible", switch_network, "active", SettingsBindFlags.DEFAULT);
+			nemo_settings.bind("trash-icon-visible", switch_trash, "active", SettingsBindFlags.DEFAULT);
+			nemo_settings.bind("volumes-visible", switch_mounts, "active", SettingsBindFlags.DEFAULT);
 
 			update_switches();
 	#endif
@@ -108,7 +108,7 @@ namespace Budgie {
 			));
 		}
 
-	#if HAVE_NAUTILUS
+	#if HAVE_NEMO
 		void update_switches() {
 			bool b = bg_settings.get_boolean("show-desktop-icons");
 			switch_home.sensitive = b;

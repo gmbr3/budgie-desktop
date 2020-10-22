@@ -255,7 +255,7 @@ public class IconTasklistApplet : Budgie.Applet {
 		var app_id = (string)selection_data.get_data();
 		ButtonWrapper? original_button = null;
 
-		if (app_id.has_prefix("x-nautilus-desktop")) { // Someone is trying to drag a desktop icon to an application tasklist for some reason
+		if (app_id.has_prefix("x-nemo-desktop")) { // Someone is trying to drag a desktop icon to an application tasklist for some reason
 			return;
 		}
 
