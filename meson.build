@@ -101,8 +101,8 @@ cdata.set_quoted('LOCALEDIR', localedir)
 cdata.set_quoted('PACKAGE_URL', 'https://budgie-desktop.org')
 
 with_desktop_icons = get_option('with-desktop-icons')
-if with_desktop_icons ==  'nautilus'
-    warning('You must have Nautilus 3.26 or older for desktop icons with Budgie')
+if with_desktop_icons ==  'nemo'
+    warning('You must have Nemo for desktop icons with Budgie')
 endif
 
 with_stateless = get_option('with-stateless')

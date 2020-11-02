@@ -72,8 +72,8 @@ budgie_panel_vala_args = [
         '--gresources=' + gresource,
 ]
 
-if with_desktop_icons == 'nautilus'
-    budgie_panel_vala_args += ['-D', 'HAVE_NAUTILUS']
+if with_desktop_icons == 'nemo'
+    budgie_panel_vala_args += ['-D', 'HAVE_NEMO']
 endif
 
 budgie_panel_c_args = [
