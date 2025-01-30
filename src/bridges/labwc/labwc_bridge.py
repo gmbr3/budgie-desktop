@@ -110,6 +110,7 @@ class Bridge:
                 folder = self.user_config("")
                 os.makedirs(folder, exist_ok=True)
                 shutil.copy(path, search_path[0])
+                path = search_path[0]
         except Exception as e:
             self.log.critical("Failed to copy " + path + " to " + search_path[0])
             self.log.critical(e)
@@ -122,6 +123,7 @@ class Bridge:
         try:
             if path != search_path[0]:
                 shutil.copy(path, search_path[0])
+                path = search_path[0]
         except Exception as e:
             self.log.critical("Failed to copy " + path + " to " + search_path[0])
             self.log.critical(e)
